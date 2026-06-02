@@ -1,0 +1,56 @@
+# 11. Product Search Result Sorting (Quick Sort)
+def qs(arr):
+    if len(arr)<=1:
+        return arr
+    p=arr[len(arr)//2]
+    l=[x for x in arr if x<p]
+    m=[x for x in arr if x==p]
+    r=[x for x in arr if x>p]
+    return qs(l)+m+qs(r)
+a=[1000,200,1500,500,800]
+print(qs(a))
+
+# 12. Cricket Score Sorting (Quick Sort)
+def qs(arr):
+    if len(arr)<=1:
+        return arr
+    p=arr[len(arr)//2]
+    l=[x for x in arr if x<p]
+    m=[x for x in arr if x==p]
+    r=[x for x in arr if x>p]
+    return qs(l)+m+qs(r)
+a=[45,78,23,90,67]
+print(qs(a))
+
+# 13. Employee Salary Sorting
+a=[45000,30000,60000,25000]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 14. Railway Ticket Sorting
+a=[567,123,789,345]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 15. Patient ID Sorting
+a=[205,101,309,150]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)

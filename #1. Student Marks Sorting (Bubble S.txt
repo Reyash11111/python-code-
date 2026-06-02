@@ -1,0 +1,51 @@
+#1. Student Marks Sorting (Bubble Sort)
+
+a=[75,90,65,85,70]
+n=len(a)
+for i in range(n):
+    for j in range(0,n-i-1):
+        if a[j]>a[j+1]:
+            a[j],a[j+1]=a[j+1],a[j]
+print(a)
+-------------------------------------------
+# 2. Product Price Sorting (Bubble Sort)
+a=[1200,500,2500,800]
+n=len(a)
+for i in range(n):
+    for j in range(0,n-i-1):
+        if a[j]>a[j+1]:
+            a[j],a[j+1]=a[j+1],a[j]
+print(a)
+----------------------------------------
+# 3. Student Ranking (Selection Sort)
+a=[88,72,95,60,81]
+n=len(a)
+for i in range(n):
+    m=i
+    for j in range(i+1,n):
+        if a[j]<a[m]:
+            m=j
+    a[i],a[m]=a[m],a[i]
+print(a)
+------------------------------------
+# 4. Book ID Sorting (Selection Sort)
+a=[104,101,109,102]
+n=len(a)
+for i in range(n):
+    m=i
+    for j in range(i+1,n):
+        if a[j]<a[m]:
+            m=j
+    a[i],a[m]=a[m],a[i]
+print(a)
+-------------------------------------------
+# 5. Employee Age Sorting (Selection Sort)
+a=[35,28,42,25,31]
+n=len(a)
+for i in range(n):
+    m=i
+    for j in range(i+1,n):
+        if a[j]<a[m]:
+            m=j
+    a[i],a[m]=a[m],a[i]
+print(a)

@@ -1,0 +1,91 @@
+
+# 6. Card Sorting (Insertion Sort)
+a=[7,3,9,1,5]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 7. Entered Marks Sorting (Insertion Sort)
+a=[60,50,70,40]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 8. Contact Number Sorting
+a=[9876,4567,1234,7890]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 9. Student Record Sorting (Merge Sort)
+def ms(arr):
+    if len(arr)>1:
+        m=len(arr)//2
+        L=arr[:m]
+        R=arr[m:]
+        ms(L)
+        ms(R)
+        i=j=k=0
+        while i<len(L) and j<len(R):
+            if L[i]<R[j]:
+                arr[k]=L[i]
+                i+=1
+            else:
+                arr[k]=R[j]
+                j+=1
+            k+=1
+        while i<len(L):
+            arr[k]=L[i]
+            i+=1
+            k+=1
+        while j<len(R):
+            arr[k]=R[j]
+            j+=1
+            k+=1
+a=[55,12,89,34,23,78]
+ms(a)
+print(a)
+
+# 10. Customer Account Sorting (Merge Sort)
+def ms(arr):
+    if len(arr)>1:
+        m=len(arr)//2
+        L=arr[:m]
+        R=arr[m:]
+        ms(L)
+        ms(R)
+        i=j=k=0
+        while i<len(L) and j<len(R):
+            if L[i]<R[j]:
+                arr[k]=L[i]
+                i+=1
+            else:
+                arr[k]=R[j]
+                j+=1
+            k+=1
+        while i<len(L):
+            arr[k]=L[i]
+            i+=1
+            k+=1
+        while j<len(R):
+            arr[k]=R[j]
+            j+=1
+            k+=1
+a=[5678,1234,8901,3456]
+ms(a)
+print(a)

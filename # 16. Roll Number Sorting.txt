@@ -1,0 +1,55 @@
+# 16. Roll Number Sorting
+a=[25,12,30,18]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 17. Nearly Sorted Data
+a=[10,20,30,25,40]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 18. Customer ID Merge
+a=[38,27,43,3,9,82,10]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 19. Sports Score Sorting
+a=[120,95,150,80,110]
+for i in range(1,len(a)):
+    k=a[i]
+    j=i-1
+    while j>=0 and k<a[j]:
+        a[j+1]=a[j]
+        j-=1
+    a[j+1]=k
+print(a)
+
+# 20. Large Dataset Sorting
+def qs(arr):
+    if len(arr)<=1:
+        return arr
+    p=arr[len(arr)//2]
+    l=[x for x in arr if x<p]
+    m=[x for x in arr if x==p]
+    r=[x for x in arr if x>p]
+    return qs(l)+m+qs(r)
+a=[99,12,45,67,23,89,34]
+print(qs(a))
